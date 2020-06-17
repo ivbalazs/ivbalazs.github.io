@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kosár</title>
+</head>
+
+<style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Venni</th>
+            <th>Termék</th>
+            <th>Lista</th>
+        </tr>
+        <tr id="trNumber0" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text0a" class="texta" style="display: inline-block;">hamburgerzsemle</label> </td>
+            <td><label id="text0b" class="textb" style="display:none">hamburgerzsemle</label></td>
+        </tr>
+        <tr id="trNumber1" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck1" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text1a" class="texta" style="display: inline-block;">hotdog kifli</label> </td>
+            <td><label id="text1b" class="textb" style="display:none">hotdog kifli</label></td>
+        </tr>
+        <tr id="trNumber2" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck2" class="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text2a" class="texta" style="display: inline-block;">kalács</label> </td>
+            <td><label id="text2b" class="textb" style="display:none">kalács</label></td>
+        </tr>
+        <tr id="trNumber3" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck3" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text3a" class="texta" style="display: inline-block;">kifli, zsemle</label> </td>
+            <td><label id="text3b" class="textb" style="display:none">kifli, zsemle</label></td>
+        </tr>
+        <tr id="trNumber4" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck4" class="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text4a" class="texta" style="display: inline-block;">szeletelt barnakenyér</label> </td>
+            <td><label id="text4b" class="textb" style="display:none">szeletelt barnakenyér</label></td>
+        </tr>
+        <tr id="trNumber5" class="trOsztaly">
+            <td><input type="checkbox" id="myCheck5" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td><label id="text5a" class="texta" style="display: inline-block;">teljes kiőrlésű pékáru</label> </td>
+            <td><label id="text5b" class="textb" style="display:none">teljes kiőrlésű pékáru</label></td>
+        </tr>
+
+
+
+    </table>
+
+
+
+
+
+    <!--<input type="checkbox" id="myCheck" onclick="myFunction()">
+<label id="text" style="display:inline-block">Tej</label> 
+
+<p id="text" style="display:none">Checkbox is CHECKED!</p>-->
+
+    <script>
+        function myFunction() {
+            //jó:
+            //document.querySelectorAll("#myCheck6")[0].checked;
+
+            var checkBox = document.getElementsByClassName("csoportnev");
+            var textA = document.querySelectorAll(".texta");
+            var textB = document.querySelectorAll(".textb");
+            //var checkBox = document.getElementById("myCheck6");
+            //var text = document.getElementById("text6b");
+            var i;
+            for (i = 0; i < checkBox.length; i++) {
+                if (checkBox[i].checked == true) {
+                    textA[i].style.display = "none";
+                    textB[i].style.display = "inline-block";
+                    //text6a.style.display = "none";
+                    //text6b.style.display = "inline-block";
+                    //text5a.style.display = "none";
+                    //text5b.style.display = "inline-block";
+
+                    //text.style.fontSize = "25px";
+                } else {
+                    // text.style.display = "none";
+                    //text.style.fontSize = "9px";
+                    textB[i].style.display = "none";
+                    textA[i].style.display = "inline-block";
+                    //text5b.style.display = "none";
+                    //text5a.style.display = "inline-block";
+
+                }
+
+
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>
