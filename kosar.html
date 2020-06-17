@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,7 +33,7 @@
         <tr>
             <th>Venni</th>
             <th>Termék</th>
-            <th>Lista</th>
+            <th>Bevásárlólista</th>
         </tr>
         <tr id="trNumber0" class="trOsztaly">
             <td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td>
@@ -69,7 +70,7 @@
 
     </table>
 
-
+    <p><input type="button" value="Bevásárló lista" onclick="myList()"></p>
 
 
 
@@ -97,7 +98,7 @@
                     //text6b.style.display = "inline-block";
                     //text5a.style.display = "none";
                     //text5b.style.display = "inline-block";
-
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
                     //text.style.fontSize = "25px";
                 } else {
                     // text.style.display = "none";
@@ -113,9 +114,26 @@
             }
 
 
-
         }
 
+        function myList() {
+            //var checkList = document.getElementsByClassName("lista");
+            //var checkList = document.querySelectorAll(".textb");
+            var checkList = document.getElementsByClassName("csoportnev");
+            var kiiras = "";
+            var i;
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true) {
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + ", ";
+                    
+                }
+                
+
+            }
+            document.writeln(kiiras);
+        }
     </script>
 </body>
 
