@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +15,7 @@
     }
 
     td,
+    select,
     th {
         border: 1px solid #dddddd;
         text-align: left;
@@ -32,36 +32,85 @@
     <table>
         <tr>
             <th>Venni</th>
+            <th>Bolt</th>
             <th>Termék</th>
             <th>Bevásárlólista</th>
         </tr>
         <tr id="trNumber0" class="trOsztaly">
             <td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt0" class="bolt">
+                    <option value="aldi" selected>Aldi</option>
+                    <option value="lidl">Lidl</option>
+                    <option value="auchan">Auchan</option>
+                    <option value="dm">dm</option>
+                </select>
+            </td>
             <td><label id="text0a" class="texta" style="display: inline-block;">hamburgerzsemle</label> </td>
             <td><label id="text0b" class="textb" style="display:none">hamburgerzsemle</label></td>
         </tr>
         <tr id="trNumber1" class="trOsztaly">
             <td><input type="checkbox" id="myCheck1" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt1" class="bolt">
+                    <option value="aldi">Aldi</option>
+                    <option value="lidl" selected>Lidl</option>
+                    <option value="auchan">Auchan</option>
+                    <option value="dm">dm</option>
+                </select>
+            </td>
             <td><label id="text1a" class="texta" style="display: inline-block;">hotdog kifli</label> </td>
             <td><label id="text1b" class="textb" style="display:none">hotdog kifli</label></td>
         </tr>
         <tr id="trNumber2" class="trOsztaly">
             <td><input type="checkbox" id="myCheck2" class="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt2" class="bolt">
+                    <option value="aldi">Aldi</option>
+                    <option value="lidl">Lidl</option>
+                    <option value="auchan" selected>Auchan</option>
+                    <option value="dm">dm</option>
+                </select>
+            </td>
             <td><label id="text2a" class="texta" style="display: inline-block;">kalács</label> </td>
             <td><label id="text2b" class="textb" style="display:none">kalács</label></td>
         </tr>
         <tr id="trNumber3" class="trOsztaly">
             <td><input type="checkbox" id="myCheck3" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt3" class="bolt">
+                    <option value="aldi">Aldi</option>
+                    <option value="lidl">Lidl</option>
+                    <option value="auchan">Auchan</option>
+                    <option value="dm" selected>dm</option>
+                </select>
+            </td>
             <td><label id="text3a" class="texta" style="display: inline-block;">kifli, zsemle</label> </td>
             <td><label id="text3b" class="textb" style="display:none">kifli, zsemle</label></td>
         </tr>
         <tr id="trNumber4" class="trOsztaly">
             <td><input type="checkbox" id="myCheck4" class="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt4" class="bolt">
+                    <option value="aldi">Aldi</option>
+                    <option value="lidl">Lidl</option>
+                    <option value="auchan">Auchan</option>
+                    <option value="dm">dm</option>
+                </select>
+            </td>
             <td><label id="text4a" class="texta" style="display: inline-block;">szeletelt barnakenyér</label> </td>
             <td><label id="text4b" class="textb" style="display:none">szeletelt barnakenyér</label></td>
         </tr>
         <tr id="trNumber5" class="trOsztaly">
             <td><input type="checkbox" id="myCheck5" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
+            <td>
+                <select id="bolt5" class="bolt">
+                    <option value="aldi">Aldi</option>
+                    <option value="lidl">Lidl</option>
+                    <option value="auchan">Auchan</option>
+                    <option value="dm">dm</option>
+                </select>
+            </td>
             <td><label id="text5a" class="texta" style="display: inline-block;">teljes kiőrlésű pékáru</label> </td>
             <td><label id="text5b" class="textb" style="display:none">teljes kiőrlésű pékáru</label></td>
         </tr>
@@ -70,8 +119,13 @@
 
     </table>
 
-    <p><input type="button" value="Bevásárló lista" onclick="myList()"></p>
+    <p><input type="button" value="Bevásárló lista Teljes" onclick="myList()"></p>
+    <p><input type="button" value="Bevásárló lista Aldi" onclick="myListAldi()"></p>
+    <p><input type="button" value="Bevásárló lista Lidl" onclick="myListLidl()"></p>
+    <p><input type="button" value="Bevásárló lista Auchan" onclick="myListAuchan()"></p>
+    <p><input type="button" value="Bevásárló lista dm" onclick="myListDm()"></p>
 
+    <p><div id="log"></div></p>
 
 
     <!--<input type="checkbox" id="myCheck" onclick="myFunction()">
@@ -127,13 +181,96 @@
                     //console.log(document.querySelectorAll(".textb")[i].innerHTML);
                     //document.write(document.querySelectorAll(".textb")[i].innerHTML);
                     kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
-                    
+
                 }
-                
+
 
             }
-            document.writeln(kiiras);
+            //document.writeln(kiiras);
+            document.getElementById('log').innerHTML += '<br><strong>Bevásárló lista Teljes:</strong><br>' + kiiras;
         }
+
+        function myListAldi() {
+            //var checkList = document.getElementsByClassName("lista");
+            //var checkList = document.querySelectorAll(".textb");
+            var checkList = document.getElementsByClassName("csoportnev");
+            var kiiras = "";
+            var i;
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 0) {
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+
+                }
+
+
+            }
+            //document.writeln(kiiras);
+            document.getElementById('log').innerHTML += '<br><strong>Bevásárló lista Aldi:</strong><br>' + kiiras;
+        }
+
+        function myListLidl() {
+            //var checkList = document.getElementsByClassName("lista");
+            //var checkList = document.querySelectorAll(".textb");
+            var checkList = document.getElementsByClassName("csoportnev");
+            var kiiras = "";
+            var i;
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 1) {
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+
+                }
+
+
+            }
+            //document.writeln(kiiras);
+            document.getElementById('log').innerHTML += '<br><strong>Bevásárló lista Lidl:</strong><br>' + kiiras;
+        }
+
+        function myListAuchan() {
+            //var checkList = document.getElementsByClassName("lista");
+            //var checkList = document.querySelectorAll(".textb");
+            var checkList = document.getElementsByClassName("csoportnev");
+            var kiiras = "";
+            var i;
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 2) {
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+
+                }
+
+
+            }
+            //document.writeln(kiiras);
+            document.getElementById('log').innerHTML += '<br><strong>Bevásárló lista Auchan:</strong><br>' + kiiras;
+        }
+
+        function myListDm() {
+            //var checkList = document.getElementsByClassName("lista");
+            //var checkList = document.querySelectorAll(".textb");
+            var checkList = document.getElementsByClassName("csoportnev");
+            var kiiras = "";
+            var i;
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 3) {
+                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+
+                }
+
+
+            }
+            //document.writeln(kiiras);
+            document.getElementById('log').innerHTML += '<br><strong>Bevásárló lista dm:</strong><br>' + kiiras;
+        }
+
+
     </script>
 </body>
 
