@@ -20,6 +20,8 @@
         border: 1px solid #dddddd;
         text-align: left;
         padding: 8px;
+    }.td02{
+        border: 0px; 
     }
 
     tr:nth-child(even) {
@@ -36,10 +38,10 @@
             <th>Termék</th>
             <th>Bevásárlólista</th>
         </tr>
+
         <tr id="trNumber0" class="trOsztaly">
             <td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td>
-            <td>
-                <select id="bolt0" class="bolt">
+            <td><select id="bolt0" class="bolt">
                     <option value="aldi" selected>Aldi</option>
                     <option value="lidl">Lidl</option>
                     <option value="auchan">Auchan</option>
@@ -49,12 +51,11 @@
                     <option value="biobolt">Biobolt</option>
                     <option value="ikea">Ikea</option>
                     <option value="szafibolt">Szafi bolt</option>
-
-                </select>
-            </td>
-            <td><label id="text0a" class="texta" style="display: inline-block;">hamburgerzsemle</label> </td>
-            <td><label id="text0b" class="textb" style="display:none">hamburgerzsemle</label></td>
+                </select></td>
+            <td><label id="text0a" class="texta" style="display: inline-block;">kacsa</label></td>
+            <td><label id="text0b" class="textb" style="display:none">kacsa</label></td>
         </tr>
+
         <tr id="trNumber1" class="trOsztaly">
             <td><input type="checkbox" id="myCheck1" class="csoportnev" name="csoportnev" onclick="myFunction()"></td>
             <td>
@@ -87,7 +88,7 @@
                     <option value="biobolt">Biobolt</option>
                     <option value="ikea">Ikea</option>
                     <option value="szafibolt">Szafi bolt</option>
-                    
+
                 </select>
             </td>
             <td><label id="text2a" class="texta" style="display: inline-block;">kalács</label> </td>
@@ -162,7 +163,7 @@
                     <option value="biobolt">Biobolt</option>
                     <option value="ikea">Ikea</option>
                     <option value="szafibolt">Szafi bolt</option>
-                    
+
                 </select></td>
             <td><label id="text6a" class="texta" style="display: inline-block;">palacsinta </label></td>
             <td><label id="text6b" class="textb" style="display:none">palacsinta</label></td>
@@ -180,24 +181,39 @@
                     <option value="ikea">Ikea</option>
                     <option value="szafibolt">Szafi bolt</option>
                 </select></td>
-                
+
             <td><label id="text7a" class="texta" style="display: inline-block;">bab</label></td>
             <td><label id="text7b" class="textb" style="display:none">bab</label></td>
         </tr>
 
 
     </table>
-
-    <p><input type="button" value="Bevásárló lista Teljes" onclick="myList()"></p>
-    <p><input type="button" value="Bevásárló lista Aldi" onclick="myListAldi()"></p>
-    <p><input type="button" value="Bevásárló lista Lidl" onclick="myListLidl()"></p>
-    <p><input type="button" value="Bevásárló lista Auchan" onclick="myListAuchan()"></p>
-    <p><input type="button" value="Bevásárló lista dm" onclick="myListDm()"></p>
-    <p><input type="button" value="Bevásárló lista Spar" onclick="myListSpar()"></p>
-    <p><input type="button" value="Bevásárló lista Rossmann" onclick="myListRossmann()"></p>
-    <p><input type="button" value="Bevásárló lista Biobolt" onclick="myListBiobolt()"></p>
-    <p><input type="button" value="Bevásárló lista Ikea" onclick="myListIkea()"></p>
-    <p><input type="button" value="Bevásárló lista Szafi bolt" onclick="myListSzafiBolt()"></p>
+    
+    <table>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Teljes" onclick="myList()"></p></td>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Teljes nyomtatható" onclick="myListPrinting()"></p></td>      
+        </tr>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Aldi" onclick="myListAldi()"></p></td>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Lidl" onclick="myListLidl()"></p></td>      
+        </tr>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Auchan" onclick="myListAuchan()"></p></td>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista dm" onclick="myListDm()"></p></td>      
+        </tr>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Spar" onclick="myListSpar()"></p></td>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Rossmann" onclick="myListRossmann()"></p></td>      
+        </tr>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Biobolt" onclick="myListBiobolt()"></p></td>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Ikea" onclick="myListIkea()"></p></td>      
+        </tr>
+        <tr>
+            <td class="td02"><p class="button"><input type="button" value="Bevásárló lista Szafi bolt" onclick="myListSzafiBolt()"></p></td>      
+        </tr>
+    </table>
 
     <p>
     <div id="log"></div>
@@ -245,26 +261,140 @@
 
 
         }
+         
+                function myList() {
+                    //var checkList = document.getElementsByClassName("lista");
+                    //var checkList = document.querySelectorAll(".textb");
+                    var checkList = document.getElementsByClassName("csoportnev");
+                    var kiiras = "";
+                    var i;
+                    for (i = 0; i < checkList.length; i++) {
+                        if (checkList[i].checked == true) {
+                            //console.log(document.querySelectorAll(".textb")[i].innerHTML);
+                            //document.write(document.querySelectorAll(".textb")[i].innerHTML);
+                            kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+        
+                        }
+        
+        
+                    }
+                    //document.writeln(kiiras);
+                    document.querySelector("#table").style = "visibility:collapse";
+                    document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Teljes:</strong><br>' + kiiras;
+                    
+                }
+        
 
-        function myList() {
-            //var checkList = document.getElementsByClassName("lista");
-            //var checkList = document.querySelectorAll(".textb");
+
+        function myListPrinting() {
+
+            for (j =0; j < document.getElementsByClassName("button").length; j++){
+                document.getElementsByClassName("button")[j].style.display = "none";
+            }
+            
+             for (j =0; j < document.getElementsByClassName("td02").length; j++){
+                document.getElementsByClassName("td02")[j].style.display = "none";
+            }
+            
+
+            document.querySelector("#table").style = "visibility:collapse";
+            document.getElementById('log').innerHTML ="";
+
             var checkList = document.getElementsByClassName("csoportnev");
+            
             var kiiras = "";
             var i;
             for (i = 0; i < checkList.length; i++) {
-                if (checkList[i].checked == true) {
-                    //console.log(document.querySelectorAll(".textb")[i].innerHTML);
-                    //document.write(document.querySelectorAll(".textb")[i].innerHTML);
-                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
-
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 0) {
+                                        kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
                 }
-
-
             }
-            //document.writeln(kiiras);
-            document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Teljes:</strong><br>' + kiiras;
+            if(kiiras != ""){
+            document.getElementById('log').innerHTML += '<br><strong>Aldi:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 1) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Lidl:</strong><br>' + kiiras;
+            }
+            
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 2) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Auchan:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 3) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>DM:</strong><br>' + kiiras;
+            }
+
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 4) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Spar:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 5) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Rossmann:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 6) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Biobolt:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 7) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Ikea:</strong><br>' + kiiras;
+            }
+
+            var kiiras = "";
+            for (i = 0; i < checkList.length; i++) {
+                if (checkList[i].checked == true && document.getElementsByClassName("bolt")[i].selectedIndex == 8) {
+                    kiiras = kiiras + document.querySelectorAll(".textb")[i].innerHTML + "<br>";
+                }
+            }
+            if(kiiras != ""){
+                document.getElementById('log').innerHTML += '<br><strong>Szafi bolt:</strong><br>' + kiiras;
+            }
+
+
         }
 
         function myListAldi() {
@@ -372,7 +502,7 @@
             document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Spar:</strong><br>' + kiiras;
         }
 
-       
+
         function myListRossmann() {
             //var checkList = document.getElementsByClassName("lista");
             //var checkList = document.querySelectorAll(".textb");
@@ -413,7 +543,7 @@
             document.querySelector("#table").style = "visibility:collapse";
             document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Biobolt:</strong><br>' + kiiras;
         }
- 
+
         function myListIkea() {
             //var checkList = document.getElementsByClassName("lista");
             //var checkList = document.querySelectorAll(".textb");
