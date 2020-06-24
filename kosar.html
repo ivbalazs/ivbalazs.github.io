@@ -5,30 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kosár</title>
+    <link rel="stylesheet" href="css/selectors.css">
 </head>
 
 <style>
-    table {
-        font-family: arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    td,
-    select,
-    th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    .td02 {
-        border: 0px;
-    }
-
-    tr.trOsztaly:nth-child(even) {
-        background-color: #dddddd;
-    }
+    
 </style>
 
 <body>
@@ -59,7 +40,7 @@
         </tr>
  -->
  
- <tr id="trNumber0" class="trOsztaly"><td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt0" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text0a" class="texta" style="display: inline-block;">hamburgerzsemle</label></td><td><label id="text0b" class="textb" style="display:none">hamburgerzsemle</label></td></tr>
+<tr id="trNumber0" class="trOsztaly"><td><input type="checkbox" id="myCheck0" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt0" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text0a" class="texta" style="display: inline-block;">hamburgerzsemle</label></td><td><label id="text0b" class="textb" style="display:none">hamburgerzsemle</label></td></tr>
 <tr id="trNumber1" class="trOsztaly"><td><input type="checkbox" id="myCheck1" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt1" class="bolt"><option value="aldi">Aldi</option><option value="lidl" selected>Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text1a" class="texta" style="display: inline-block;">hotdog kifli</label></td><td><label id="text1b" class="textb" style="display:none">hotdog kifli</label></td></tr>
 <tr id="trNumber2" class="trOsztaly"><td><input type="checkbox" id="myCheck2" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt2" class="bolt"><option value="aldi">Aldi</option><option value="lidl" selected>Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text2a" class="texta" style="display: inline-block;">kalács</label></td><td><label id="text2b" class="textb" style="display:none">kalács</label></td></tr>
 <tr id="trNumber3" class="trOsztaly"><td><input type="checkbox" id="myCheck3" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt3" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text3a" class="texta" style="display: inline-block;">szeletelt kenyér</label></td><td><label id="text3b" class="textb" style="display:none">szeletelt kenyér</label></td></tr>
@@ -70,7 +51,7 @@
 <tr id="trNumber8" class="trOsztaly"><td><input type="checkbox" id="myCheck8" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt8" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text8a" class="texta" style="display: inline-block;">puffasztott rizsszelet</label></td><td><label id="text8b" class="textb" style="display:none">puffasztott rizsszelet</label></td></tr>
 <tr id="trNumber9" class="trOsztaly"><td><input type="checkbox" id="myCheck9" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt9" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar" selected>Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text9a" class="texta" style="display: inline-block;">csirkecomb</label></td><td><label id="text9b" class="textb" style="display:none">csirkecomb</label></td></tr>
 <tr id="trNumber10" class="trOsztaly"><td><input type="checkbox" id="myCheck10" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt10" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar" selected>Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text10a" class="texta" style="display: inline-block;">csirkemell</label></td><td><label id="text10b" class="textb" style="display:none">csirkemell</label></td></tr>
-<tr id="trNumber11" class="trOsztaly"><td><input type="checkbox" id="myCheck11" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt11" class="bolt"><option value="aldi">Aldi</option><option value="lidl" selected>Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text11a" class="texta" style="display: inline-block;">darált hús</label></td><td><label id="text11b" class="textb" style="display:none">darált hús</label></td></tr>
+<!-- <tr id="trNumber11" class="trOsztaly"><td><input type="checkbox" id="myCheck11" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt11" class="bolt"><option value="aldi">Aldi</option><option value="lidl" selected>Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text11a" class="texta" style="display: inline-block;">darált hús</label></td><td><label id="text11b" class="textb" style="display:none">darált hús</label></td></tr>
 <tr id="trNumber12" class="trOsztaly"><td><input type="checkbox" id="myCheck12" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt12" class="bolt"><option value="aldi" selected>Aldi</option><option value="lidl">Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text12a" class="texta" style="display: inline-block;">grill kolbász</label></td><td><label id="text12b" class="textb" style="display:none">grill kolbász</label></td></tr>
 <tr id="trNumber13" class="trOsztaly"><td><input type="checkbox" id="myCheck13" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt13" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text13a" class="texta" style="display: inline-block;">szeletelt gyulai kolbász</label></td><td><label id="text13b" class="textb" style="display:none">szeletelt gyulai kolbász</label></td></tr>
 <tr id="trNumber14" class="trOsztaly"><td><input type="checkbox" id="myCheck14" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt14" class="bolt"><option value="aldi" selected>Aldi</option><option value="lidl">Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text14a" class="texta" style="display: inline-block;">szalámi snack</label></td><td><label id="text14b" class="textb" style="display:none">szalámi snack</label></td></tr>
@@ -266,55 +247,54 @@
 <tr id="trNumber204" class="trOsztaly"><td><input type="checkbox" id="myCheck204" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt204" class="bolt"><option value="aldi" selected>Aldi</option><option value="lidl">Lidl</option><option value="auchan">Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text204a" class="texta" style="display: inline-block;">gyümölcslé</label></td><td><label id="text204b" class="textb" style="display:none">gyümölcslé</label></td></tr>
 <tr id="trNumber205" class="trOsztaly"><td><input type="checkbox" id="myCheck205" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt205" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text205a" class="texta" style="display: inline-block;">gyümölcstea</label></td><td><label id="text205b" class="textb" style="display:none">gyümölcstea</label></td></tr>
 <tr id="trNumber206" class="trOsztaly"><td><input type="checkbox" id="myCheck206" class="csoportnev" onclick="myFunction()"></td><td><select id="bolt206" class="bolt"><option value="aldi">Aldi</option><option value="lidl">Lidl</option><option value="auchan" selected>Auchan</option><option value="dm">dm</option><option value="spar">Spar</option><option value="rossmann">Rossmann</option><option value="biobolt">Biobolt</option><option value="ikea">Ikea</option><option value="szafibolt">Szafi bolt</option></select></td><td><label id="text206a" class="texta" style="display: inline-block;">zöldtea</label></td><td><label id="text206b" class="textb" style="display:none">zöldtea</label></td></tr>
-
+ -->
 
     </table>
 
     <table>
         <tr>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Teljes" onclick="myList()"></p>
+                <p class="button"><input type="button" value="Bevásárlólista Teljes" onclick="myList()"></p>
             </td>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Teljes nyomtatható"
-                        onclick="myListPrinting()"></p>
-            </td>
-        </tr>
-        <tr>
-            <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Aldi" onclick="myListAldi()"></p>
-            </td>
-            <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Lidl" onclick="myListLidl()"></p>
+                <p class="button"><input class="buttonNyomtathato" type="button" value="Bevásárlólista Teljes nyomtatható" onclick="myListPrinting()"></p>
             </td>
         </tr>
         <tr>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Auchan" onclick="myListAuchan()"></p>
+                <p class="button"><input type="button" value="Bevásárlólista Aldi" onclick="myListAldi()"></p>
             </td>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista dm" onclick="myListDm()"></p>
-            </td>
-        </tr>
-        <tr>
-            <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Spar" onclick="myListSpar()"></p>
-            </td>
-            <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Rossmann" onclick="myListRossmann()"></p>
+                <p class="button"><input type="button" value="Bevásárlólista Lidl" onclick="myListLidl()"></p>
             </td>
         </tr>
         <tr>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Biobolt" onclick="myListBiobolt()"></p>
+                <p class="button"><input type="button" value="Bevásárlólista Auchan" onclick="myListAuchan()"></p>
             </td>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Ikea" onclick="myListIkea()"></p>
+                <p class="button"><input type="button" value="Bevásárlólista DM" onclick="myListDm()"></p>
             </td>
         </tr>
         <tr>
             <td class="td02">
-                <p class="button"><input type="button" value="Bevásárló lista Szafi bolt" onclick="myListSzafiBolt()">
+                <p class="button"><input type="button" value="Bevásárlólista Spar" onclick="myListSpar()"></p>
+            </td>
+            <td class="td02">
+                <p class="button"><input type="button" value="Bevásárlólista Rossmann" onclick="myListRossmann()"></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="td02">
+                <p class="button"><input type="button" value="Bevásárlólista Biobolt" onclick="myListBiobolt()"></p>
+            </td>
+            <td class="td02">
+                <p class="button"><input type="button" value="Bevásárlólista Ikea" onclick="myListIkea()"></p>
+            </td>
+        </tr>
+        <tr>
+            <td class="td02">
+                <p class="button"><input type="button" value="Bevásárlólista Szafi bolt" onclick="myListSzafiBolt()">
                 </p>
             </td>
         </tr>
@@ -323,7 +303,7 @@
     <p>
     <div id="log"></div>
     </p>
-
+ 
 
     <!--<input type="checkbox" id="myCheck" onclick="myFunction()">
 <label id="text" style="display:inline-block">Tej</label> 
@@ -385,7 +365,7 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Teljes:</strong><br>' + kiiras;
+            document.getElementById('log').innerHTML = '<br><strong>Teljes:</strong><br>' + kiiras;
 
         }
 
@@ -520,7 +500,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Aldi:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Aldi:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Aldi: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListLidl() {
@@ -541,7 +526,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Lidl:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Lidl:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Lidl: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListAuchan() {
@@ -562,7 +552,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Auchan:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Auchan:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Auchan: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListDm() {
@@ -583,7 +578,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista dm:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>DM:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>DM: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListSpar() {
@@ -604,7 +604,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Spar:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Spar:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Spar: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
 
@@ -626,7 +631,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Rossmann:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Rossmann:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Rossmann: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
         function myListBiobolt() {
             //var checkList = document.getElementsByClassName("lista");
@@ -646,7 +656,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Biobolt:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Biobolt:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Biobolt: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListIkea() {
@@ -667,7 +682,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Ikea:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Ikea:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Ikea: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
         function myListSzafiBolt() {
@@ -688,7 +708,12 @@
             }
             //document.writeln(kiiras);
             document.querySelector("#table").style = "visibility:collapse";
-            document.getElementById('log').innerHTML = '<br><strong>Bevásárló lista Szafi bolt:</strong><br>' + kiiras;
+            if (kiiras != "") {
+                document.getElementById('log').innerHTML = '<br><strong>Szafi bolt:</strong><br>' + kiiras;
+            }else{
+                document.getElementById('log').innerHTML = '<br><strong>Szafi bolt: </strong>Nincs termék a bevásárlólistán!<br>' + kiiras;
+            }
+
         }
 
 
